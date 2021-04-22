@@ -25,7 +25,7 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf()
                 .requireCsrfProtectionMatcher(new AntPathRequestMatcher("!/h2-console/**"))  // h2 시큐리티에서 제외
-                .requireCsrfProtectionMatcher(new AntPathRequestMatcher("!/swagger-ui.html/**")) //swagger-ui 제회
+                .requireCsrfProtectionMatcher(new AntPathRequestMatcher("!/swagger-ui.html/**")) //swagger-ui 제외
                 .and().headers().addHeaderWriter(new StaticHeadersWriter("X-Content-Security-Policy","script-src 'self'"))
                 .frameOptions().disable();
 
