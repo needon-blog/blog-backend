@@ -19,7 +19,7 @@ public class swaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("kr.needon.blog.Controller"))
+                .apis(RequestHandlerSelectors.basePackage("kr.needon.blog.modules"))
                 .paths(PathSelectors.ant("/v1/api/**"))
                 .build()
                 .apiInfo(swaggerInfo());
